@@ -1,0 +1,21 @@
+{% extends 'users/base.html' %}
+
+{% block title%}
+Usuário {{user.first_name}}
+{% endblock %}
+
+{%block content%}
+<div class="card text-white bg-dark mb-3">
+    <div class="card-header">
+        <h4>Dados de usuários</h4>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Nome: {{user.first_name}}</h5>
+        <h5 class="card-title">Sobrenome: {{user.last_name}}</h5>
+        <h5 class="card-title">E-mail: {{user.email}}</h5>
+        <h5 class="card-title">Celular: {{user.phone_number}}</h5>
+        <a class="btn btn-primary" href="{% url 'listar_users' %}">Voltar</a>
+    </div>
+</div>
+
+{% endblock %}
